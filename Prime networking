@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Networking</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Animated background */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, red 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveBg 20s linear infinite;
+    opacity: 0.15;
+}
+
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px,-200px); }
+}
+
+/* Text */
+.hero h1 {
+    font-size: 60px;
+    color: red;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Services */
+.services {
+    padding: 80px;
+    text-align: center;
+}
+
+.card {
+    background: #111;
+    padding: 25px;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px red;
+    transform: translateY(-5px);
+}
+
+/* Contact */
+.contact {
+    padding: 60px;
+    background: #111;
+    text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+    <
