@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Networking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--red:#e10600;
+--bg:#050505;
+--card:#111;
+--text:#fff;
+--muted:#9a9a9a;
+}
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+padding:18px 80px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid #111;
+}
+
+nav img{height:45px;}
+
+/* HERO */
+.hero{
+height:100vh;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+align-items:center;
+padding:0 80px;
+position:relative;
+}
+
+/* animated glow */
+.hero::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,var(--red),transparent);
+top:20%;
+left:10%;
+filter:blur(120px);
+opacity:0.3;
+animation:move 10s infinite alternate;
+}
+
+@keyframes move{
+from{transform:translate(0,0);}
+to{transform:translate(150px,80px);}
+}
+
+.hero h1{
+font-size:64px;
+line-height:1.1;
+}
+
+.hero span{color:var(--red);}
+
+.hero p{
+margin-top:20px;
+color:var(--muted);
+font-size:18px;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 32px;
+background:var(--red);
+border:none;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+box-shadow:0 0 25px var(--red);
+}
+
+/* HERO IMAGE */
+.hero img{
+width:100%;
+border-radius:10px;
+z-index:2;
+}
+
+/* SECTION */
+.section{
+padding:120px 80px;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.section h2{
+font-size:42px;
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:10px;
+border:1px solid #1a1a1a;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:var(--red);
+box-shadow:0 0 20px rgba(255,0,0,0.2);
+}
+
+/* SPLIT */
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.split img{
+width:100%;
+border-radius:10px;
+}
+
+.split p{
+color:var(--muted);
+}
+
+/* CLIENTS */
+.clients{
+display:flex;
+gap:60px;
+color:#666;
+font-weight:600;
+}
+
+/* CTA */
+.cta{
+background:#111;
+text-align:center;
+padding:120px 20px;
+}
+
+.cta h2{
+font-size:42px;
+}
+
+/* FOOTER */
+footer{
+padding:40px 80px;
+border-top:1px solid #111;
+color:#666;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<img src="logo.png">
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div>
+<h1>Next Generation <span>Network Infrastructure</span></h1>
+<p>Delivering enterprise-grade connectivity solutions across India and global markets.</p>
+<button class="btn">Explore Solutions</button>
+</div>
+
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+
+</section>
+
+<!-- CLIENTS -->
+<section class="section">
+<h2>Trusted Across Industries</h2>
+<div class="clients">
+<div>Railways</div>
+<div>Government</div>
+<div>Enterprises</div>
+<div>Infrastructure</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+<h2>Capabilities</h2>
+
+<div class="grid">
+<div class="card">Cable Infrastructure</div>
+<div class="card">CCTV Systems</div>
+<div class="card">Fiber Networking</div>
+<div class="card">Railway Projects</div>
+</div>
+
+</section>
+
+<!-- SPLIT -->
+<section class="section">
+<div class="split">
+
+<img src="https://images.unsplash.com/photo-1581090700227-1e8b7f7e8bba">
+
+<div>
+<h2>Engineering Reliable Systems</h2>
+<p>
+We design and execute scalable network systems for mission-critical environments with precision and efficiency.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Let’s Build Your Infrastructure</h2>
+<button class="btn">Contact Now</button>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+<h2>Contact</h2>
+<p>📞 +91 9811941415</p>
+<p>📧 primenetworkings.team@gmail.com</p>
+<p>🌐 primenetworkings.in</p>
+</section>
+
+<a href="https://wa.me/919811941415" class="whatsapp">💬</a>
+
+<footer>
+© 2026 Prime Networking
+</footer>
+
+<script>
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+sec.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
