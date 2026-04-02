@@ -1,17 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prime Networking</title>
+
 <style>
-body{margin:0;background:black;color:white;font-family:Arial;text-align:center}
-h1{color:red;margin-top:50px}
+body {
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+/* NAV */
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    background:#000;
+    position:fixed;
+    width:100%;
+}
+
+nav h2 {
+    color:red;
+}
+
+/* HERO */
+.hero {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+}
+
+.hero h1 {
+    font-size:60px;
+    color:red;
+    letter-spacing:2px;
+}
+
+.hero p {
+    font-size:20px;
+    opacity:0.8;
+}
+
+/* BUTTON */
+.btn {
+    margin-top:20px;
+    padding:12px 25px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+/* SERVICES */
+.services {
+    padding:80px;
+    text-align:center;
+}
+
+.card {
+    background:#111;
+    padding:25px;
+    margin:15px;
+    display:inline-block;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 0 25px red;
+}
+
+/* CONTACT */
+.contact {
+    padding:60px;
+    background:#111;
+    text-align:center;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:green;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+}
 </style>
+
 </head>
+
 <body>
 
+<nav>
+<h2>PRIME</h2>
+</nav>
+
+<section class="hero">
 <h1>PRIME NETWORKING</h1>
-<h2>Global Networking Solutions</h2>
+<p>Global Networking Solutions</p>
 <p>Cable | CCTV | Fiber | Infrastructure</p>
+<button class="btn">Get Started</button>
+</section>
+
+<section class="services">
+<h2 style="color:red;">Our Services</h2>
+<div class="card">Cable Pulling</div>
+<div class="card">CCTV Installation</div>
+<div class="card">Fiber Networking</div>
+<div class="card">Railway Projects</div>
+</section>
+
+<section class="contact">
+<h2 style="color:red;">Contact</h2>
+<p>📞 +91 9811941415</p>
+<p>📧 primenetworkings.team@gmail.com</p>
+</section>
+
+<a href="https://wa.me/919811941415" class="whatsapp">💬</a>
 
 </body>
 </html>
